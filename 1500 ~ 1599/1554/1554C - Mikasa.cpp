@@ -19,13 +19,6 @@ int main()
         if (n > m) {
             cout << 0 << '\n';
         }
-        // else if (n == m) {
-        //     int index = 0;
-        //     while ((n & (1 << index)) != 0) {
-        //         ++index;
-        //     }
-        //     cout << pow(2, index) << '\n';
-        // }
         else {
             int value = 0;
             for (int i = 31; i >= 0; --i) {
@@ -41,12 +34,6 @@ int main()
             }
 
             if ((value ^ n) == m) {
-                // for (int i = 0; i < 32; ++i) {
-                //     if ((value & (1 << i)) == 0) {
-                //         value |= (1 << i);
-                //         break;
-                //     }
-                // }
                 bool isFind = false;
                 for (int i = 0; i < 32; ++i) {
                     int left = (n & (1 << i));
